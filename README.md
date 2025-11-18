@@ -1,7 +1,3 @@
-<!-- OPEN GRAPH / SOCIAL PREVIEW -->
-<p align="center">
-  <img src="assets/screenshots/banner.png" width="100%" />
-</p>
 
 <meta property="og:title" content="HealthEase — AI Powered Medical Assistance Platform" />
 <meta property="og:description" content="Award-winning MedTech platform with AI symptom analysis, calling agents, emergency support, and smart healthcare automation." />
@@ -103,7 +99,7 @@ USER ───────< APPOINTMENT >────── DOCTOR
 ```
 
 <p align="center">
-  <img src="screenshots/er.png" width="70%">
+  <img src="screenshots/er.png" >
 </p>
 
 ---
