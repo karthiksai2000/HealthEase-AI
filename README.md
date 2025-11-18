@@ -99,7 +99,7 @@ USER ───────< APPOINTMENT >────── DOCTOR
 ```
 
 <p align="center">
-  <img src="screenshots/er.png" >
+  <img src="assets/screenshots/er.png" >
 </p>
 
 ---
