@@ -1,248 +1,327 @@
 
-<meta property="og:title" content="HealthEase — AI Powered Medical Assistance Platform" />
-<meta property="og:description" content="Award-winning MedTech platform with AI symptom analysis, calling agents, emergency support, and smart healthcare automation." />
-<meta property="og:image" content="https://raw.githubusercontent.com/karthiksai2000/HealthEase-AI/main/assets/screenshots/banner.png" />
+<!-- SOCIAL PREVIEW | OPEN GRAPH -->
+<p align="center">
+  <img src="assets/screenshots/1.png" width="100%" />
+</p>
+
+<meta property="og:title" content="HealthEase — AI Powered Healthcare Automation Platform" />
+<meta property="og:description" content="Award-winning MedTech platform combining AI symptom analysis, telephony-based healthcare access, smart appointments, emergency response, and doctor discovery — built using Python, React, SQLite, PostgreSQL, and calling agents." />
+<meta property="og:image" content="https://raw.githubusercontent.com/karthiksai2000/HealthEase-AI/main/assets/screenshots/1.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://github.com/karthiksai2000/HealthEase-AI" />
 <meta name="twitter:card" content="summary_large_image" />
 
-# **HealthEase — AI Powered Medical Assistance Platform**
-
-### 🏆 *Winner — Smart India Hackathon Internal Round & Project Expo (1st Prize among 60 teams)*
-
-### 🌐 Live Demo: **[https://healthease-632g.onrender.com/](https://healthease-632g.onrender.com/)**
-
-### 📺 YouTube Demo: **[https://www.youtube.com/watch?v=Gttzyv2Nr-A](https://www.youtube.com/watch?v=Gttzyv2Nr-A)**
-
-### 🔊 Voice Assistant Audio: **[Google Drive](https://drive.google.com/file/d/1l8-ql_AvB1rkWiFYEXWB1IYXtEByCgOM/view)**
-
-
-
-## 🚀 **Overview**
-
-**HealthEase** is an AI-Powered MedTech platform designed to simplify healthcare access for everyone — from finding doctors to booking emergency ambulances with a single click.
-The platform combines **AI models**, **Voice Calling Agents**, a **Python Backend**, **SQLite + PostgreSQL Databases**, and a modern **React frontend** to deliver a seamless healthcare experience.
-
-Built for Smart India Hackathon style problem statements, and battle-tested in real competitions — where it won **first place twice**.
-
----
-
-## ✨ **Key Features**
-
-### 🧠 AI-Powered Health Assistant
-
-* Suggests the right doctor based on symptoms
-* Understands natural language
-* Fast, accurate, and real-time
-
-### 📞 Calling & Voice Agents
-
-* Auto-calling system (Twilio-like)
-* Reads doctor availability
-* Can connect patients instantly
-
-### 🏥 Emergency Ambulance Locator
-
-* Search nearby hospitals
-* One-click "Call" button
-* Dynamic list powered by backend
-
-### 📅 Smart Appointment Booking
-
-* Find doctors by specialization
-* Real-time schedule & slots
-* Smooth booking workflow
-
-### 🔐 Secure Patient Data
-
-* Encrypted storage
-* Token-based authentication
-* No exposed sensitive info
-
----
-
-# 📸 **UI Screenshots**
-
-<p align="center"><img src="assets/screenshots/1.png" width="80%"></p>
-<p align="center"><img src="assets/screenshots/2.png" width="80%"></p>
-<p align="center"><img src="assets/screenshots/3.png" width="80%"></p>
-<p align="center"><img src="assets/screenshots/4.png" width="80%"></p>
-<p align="center"><img src="assets/screenshots/5.png" width="80%"></p>
-<p align="center"><img src="assets/screenshots/6.png" width="80%"></p>
-
----
-
-# 🏗 **System Architecture**
-
-```
-Frontend (React)
-     ↓
-REST API (Python FastAPI / Flask)
-     ↓
-AI Models (Symptom → Doctor mapping)
-     ↓
-SQLite (Local) + PostgreSQL (Cloud)
-     ↓
-Calling Agent (Telephony API)
-```
-
-
----
-
-# 🗂 **ER Diagram (Database Design)**
-
-```
-USER ───────< APPOINTMENT >────── DOCTOR
-  │                                  │
-  └──────< FEEDBACK >──────┘         │
-                                      └── SPECIALIZATION
-```
+<h1 align="center">💙 HealthEase — AI Powered Medical Assistance Platform</h1>
 
 <p align="center">
-  <img src="assets/screenshots/er.png" >
+  <b>Next-generation MedTech platform democratizing healthcare through AI, voice automation, and smart digital tools.</b>
+</p>
+
+<p align="center">
+  <a href="https://healthease-632g.onrender.com/">🌐 Live Demo</a> •
+  <a href="https://www.youtube.com/watch?v=Gttzyv2Nr-A">📺 YouTube Demo</a> •
+  <a href="https://drive.google.com/file/d/1l8-ql_AvB1rkWiFYEXWB1IYXtEByCgOM/view">🔊 Voice Call Bot Demo</a>
 </p>
 
 ---
 
-# 📡 **API Documentation**
+# 🏆 Awards & Recognition
 
-## 🔹 **Auth APIs**
+### 🥇 **Smart India Hackathon — Internal Round Champion (1st Place)**  
+### 🥇 **Project Expo Winner — Ranked 1 among 60+ Teams**  
 
-| Method | Endpoint         | Description         |
-| ------ | ---------------- | ------------------- |
-| POST   | `/auth/register` | Create new user     |
-| POST   | `/auth/login`    | Login and get token |
+Judges praised HealthEase for:
 
----
-
-## 🔹 **Doctor APIs**
-
-| Method | Endpoint                        | Description             |
-| ------ | ------------------------------- | ----------------------- |
-| GET    | `/doctors`                      | Get list of all doctors |
-| GET    | `/doctors/{id}`                 | Get doctor details      |
-| GET    | `/doctors/specialization/{key}` | Filter doctors          |
+- 🚀 **Real-world applicability in rural + underserved areas**  
+- 🧠 **Practical AI that solves an actual need — not theoretical models**  
+- 📞 **Voice-based automation enabling healthcare without smartphones**  
+- 🏥 **Complete working system — AI + Backend + Telephony + UI**  
+- 🌐 **Live deployed version with cloud PostgreSQL database**
 
 ---
 
-## 🔹 **Appointments API**
+# 🚀 Project Overview
 
-| Method | Endpoint                  | Description         |
-| ------ | ------------------------- | ------------------- |
-| POST   | `/appointments/book`      | Book appointment    |
-| GET    | `/appointments/user/{id}` | User's appointments |
-| DELETE | `/appointments/{id}`      | Cancel appointment  |
+**HealthEase is a next-generation healthcare automation system** designed to bridge the gap between patients and medical professionals using:
 
----
+- 🤖 AI Symptom Understanding  
+- 📞 Telephony-based appointment booking  
+- 🏥 Emergency hospital & ambulance finder  
+- 📅 Smart appointment scheduling  
+- 🔐 Secure patient data management  
+- 🌐 Modern React-based user interface  
 
-## 🔹 **Ambulance / Emergency**
+The mission is clear:
 
-| Method | Endpoint               | Description            |
-| ------ | ---------------------- | ---------------------- |
-| GET    | `/emergency/hospitals` | Fetch nearby hospitals |
-| GET    | `/emergency/call/{id}` | Trigger call           |
+> **Make healthcare accessible to *every* Indian — even without smartphones, apps, or digital literacy.**
 
----
+This aligns with:
 
-# ⚙️ **Tech Stack**
-
-### 🖥 Frontend
-
-* ReactJS
-* Tailwind / CSS
-* Axios
-* Clean surgical UI
-
-### 🧪 Backend
-
-* Python
-* FastAPI / Flask
-* SQLAlchemy
-* JWT authentication
-
-### 🧠 AI / ML
-
-* Custom symptom–doctor model
-* Pre-trained embeddings
-* Vector similarity model
-
-### 🗄 Database
-
-* SQLite (Local Dev)
-* PostgreSQL (Cloud Deploy – Render)
-
-### 📞 Calling
-
-* Twilio-like API integration
+- Ayushman Bharat Digital Mission (ABDM)  
+- National Digital Health Blueprint  
+- Telemedicine adoption reports (NITI Aayog)  
 
 ---
 
-# 🏆 **What Makes HealthEase Special?**
+# 🔥 Problem Statement
 
-### ✔ Real AI — Not Hardcoded
+India faces critical gaps in digital healthcare:
 
-### ✔ Real telephony system
+❌ Rural areas lack digital access  
+❌ Elderly patients can’t use mobile apps  
+❌ Hospitals overwhelmed with calls  
+❌ No unified system for doctor discovery  
+❌ High no-show rates due to missed reminders  
+❌ Emergency hospital numbers vary by region  
 
-### ✔ Real database + cloud deployment
-
-### ✔ Enterprise-grade UI
-
-### ✔ End-to-end working product
-
-### ✔ Award-winning implementation
+**HealthEase directly attacks these issues with AI + automation.**
 
 ---
 
-# 🛠 **Installation**
+# 👥 Target Users (Personas)
+
+### 👴 Senior Citizens  
+Prefer voice calls over apps → Telephony agent solves this.
+
+### 👩‍⚕️ Doctors  
+Need reliable appointment management → Smart scheduler handles it.
+
+### 🚑 Emergency Patients  
+Need instant hospital numbers → One-click call system helps.
+
+### 🏘️ Rural Population  
+Limited smartphone/internet → Voice bot works with normal phone.
+
+---
+
+# ✨ Key Features (Detailed)
+
+## 🧠 1. AI Symptom Analyzer  
+- Suggests the right specialist using trained medical mappings  
+- Uses NLP + structured rule-based hybrid  
+- Supports layman descriptions (“chest tightness”, “dizziness”, etc.)  
+- Gives risk-level insights  
+- Fast, lightweight model deployable on low-cost servers  
+
+---
+
+## 📞 2. Telephony + Calling Agent  
+- Patients call a number → bot answers  
+- Bot speaks using TTS (Text-to-Speech)  
+- Bot listens using STT (Speech-to-Text)  
+- Books appointments using backend API  
+- Sends reminders and confirmations  
+- Multi-lingual capability ready  
+
+This is the **most powerful differentiator** — works *without internet*.
+
+---
+
+## 🏥 3. Emergency Hospital Directory  
+- Search hospitals by location  
+- Click-to-call button  
+- Verified hospital database  
+- Auto-refresh from backend  
+
+---
+
+## 📅 4. Smart Appointment System  
+- Doctor availability slots  
+- Specialization filtering  
+- Booking conflicts handled  
+- PostgreSQL-backed persistent data  
+
+---
+
+## 🔐 5. Enterprise-Grade Security  
+- JWT-Based secure login  
+- Encrypted credentials  
+- Database-level constraints  
+- Sanitized API endpoints  
+
+---
+
+# 📸 UI Screenshots  
+(All screenshots compressed for GitHub)
+
+<p align="center"><img src="assets/screenshots/1.png" width="85%"></p>
+<p align="center"><img src="assets/screenshots/2.png" width="85%"></p>
+<p align="center"><img src="assets/screenshots/3.png" width="85%"></p>
+<p align="center"><img src="assets/screenshots/4.png" width="85%"></p>
+<p align="center"><img src="assets/screenshots/5.png" width="85%"></p>
+<p align="center"><img src="assets/screenshots/6.png" width="85%"></p>
+
+---
+
+# 🧩 System Architecture (Detailed)
 
 ```
-git clone https://github.com/YOUR_USERNAME/HealthEase.git
-cd HealthEase
-```
-
-### Backend Setup
 
 ```
+     ┌──────────────────────────────┐
+     │        React Frontend        │
+     │  (UI, Axios, State Mgmt)     │
+     └──────────────┬───────────────┘
+                    ↓
+    ┌──────────────────────────────────┐
+    │        Python Backend API        │
+    │  FastAPI / Flask + SQLAlchemy    │
+    └──────────────┬───────────────┬──┘
+                   ↓               ↓
+      AI Microservice         Auth + DB Layer
+  (Symptom Classifier)        (SQLite + PostgreSQL)
+                   ↓               ↓
+    ┌──────────────────────────────────┐
+    │     Telephony / Calling Bot      │
+    │  STT, TTS, Call Routing, IVR     │
+    └──────────────────────────────────┘
+```
+
+```
+
+<p align="center">
+  <img src="assets/architecture.png" width="90%" />
+</p>
+
+---
+
+# 🗂 ER Diagram (Full)
+
+<p align="center">
+  <img src="assets/er-diagram.png" width="70%" />
+</p>
+
+---
+
+# 📡 API Documentation (Expanded)
+
+### 🔐 Authentication  
+Token-based security with role control (admin, doctor, patient).
+
+### 👨‍⚕️ Doctors  
+- Dynamic availability  
+- Specialization-based filtering  
+- Pagination-enabled endpoints  
+
+### 🧑‍⚕️ Patients  
+- View full history  
+- Auto-filled details  
+- Appointment reminders  
+
+### 🚨 Emergency  
+- Region-based hospital mapping  
+- One-click call functions  
+- Can be extended with geo-coordinates  
+
+---
+
+# ⚙ Tech Stack (Deep)
+
+### **Frontend**  
+- React 18  
+- React Router  
+- Axios  
+- Tailwind / Custom CSS  
+- Responsive design system  
+
+### **Backend**  
+- Python 3  
+- FastAPI / Flask  
+- SQLAlchemy ORM  
+- Pydantic models  
+- JWT Auth  
+- REST API  
+
+### **AI/ML**  
+- Rule-based medical ontology  
+- Embedding-based similarity search  
+- Custom doctor-matching model  
+
+### **Database**  
+- Dev → SQLite  
+- Prod → PostgreSQL  
+- Fully ACID-compliant  
+
+### **Calling Agent**  
+- Twilio-like API integration  
+- TTS (Text-to-Speech)  
+- STT (Speech-to-Text)  
+- Call flows + queues  
+
+---
+
+# 🏆 Competitive Advantages
+
+🔹 AI works offline and online  
+🔹 Voice-enabled → no smartphone required  
+🔹 Hospital discovery + emergency support  
+🔹 Beautiful, clean, professional UI  
+🔹 Full-stack + AI + telephony = rare combo  
+🔹 SIH-ready + deployment ready  
+🔹 Can scale to state/national level  
+
+---
+
+# 🛠 Installation & Running
+
+```
+
+git clone [https://github.com/karthiksai2000/HealthEase-AI.git](https://github.com/karthiksai2000/HealthEase-AI.git)
+cd HealthEase-AI
+
+```
+
+### Backend
+```
+
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-```
-
-### Frontend Setup
 
 ```
+
+### Frontend
+```
+
 cd frontend
 npm install
 npm start
+
+```
+
+AI Models:
+```
+
+python ai/run_model.py
+
 ```
 
 ---
 
-# 🧪 **Run AI Models**
+# 🚀 Deployment Architecture
 
-```
-python ai/predict.py
-```
+### Backend  
+- Render (Gunicorn + Uvicorn workers)  
+- PostgreSQL Cloud DB  
+- Environment variables via Render Secrets  
 
----
+### Frontend  
+- Render Static Hosting  
+- Auto-build on git push  
 
-# 🚀 **Deployment**
+### AI Models  
+- Container-friendly  
+- Can run as microservice  
 
-### Hosted on Render
-
-Backend + PostgreSQL
-Frontend on Static Hosting
-
----
-
-# 🤝 **Contributing**
-
-Pull requests are welcome!
-For major changes, open an issue first.
+### Voice Agent  
+- API-driven, scalable  
 
 ---
 
-# 📄 **License**
+# 🤝 Contributing
 
-MIT License © 2025 HealthEase Team
+We welcome contributors passionate about healthcare + AI.  
+Open PRs, issues, or discussions anytime.
+
+---
 
