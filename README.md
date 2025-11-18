@@ -1,285 +1,218 @@
+<!-- OPEN GRAPH / SOCIAL PREVIEW -->
+<p align="center">
+  <img src="assets/screenshots/banner.png" width="100%" />
+</p>
 
-# 🌐 **HealthEase-AI — Your Companion in Healthcare**
+<meta property="og:title" content="HealthEase — AI Powered Medical Assistance Platform" />
+<meta property="og:description" content="Award-winning MedTech platform with AI symptom analysis, calling agents, emergency support, and smart healthcare automation." />
+<meta property="og:image" content="https://raw.githubusercontent.com/karthiksai2000/HealthEase-AI/main/assets/screenshots/banner.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://github.com/karthiksai2000/HealthEase-AI" />
+<meta name="twitter:card" content="summary_large_image" />
+
+# **HealthEase — AI Powered Medical Assistance Platform**
+
+### 🏆 *Winner — Smart India Hackathon Internal Round & Project Expo (1st Prize among 60 teams)*
+
+### 🌐 Live Demo: **[https://healthease-632g.onrender.com/](https://healthease-632g.onrender.com/)**
+
+### 📺 YouTube Demo: **[https://www.youtube.com/watch?v=Gttzyv2Nr-A](https://www.youtube.com/watch?v=Gttzyv2Nr-A)**
+
+### 🔊 Voice Assistant Audio: **[Google Drive](https://drive.google.com/file/d/1l8-ql_AvB1rkWiFYEXWB1IYXtEByCgOM/view)**
+
+
+
+## 🚀 **Overview**
+
+**HealthEase** is an AI-Powered MedTech platform designed to simplify healthcare access for everyone — from finding doctors to booking emergency ambulances with a single click.
+The platform combines **AI models**, **Voice Calling Agents**, a **Python Backend**, **SQLite + PostgreSQL Databases**, and a modern **React frontend** to deliver a seamless healthcare experience.
+
+Built for Smart India Hackathon style problem statements, and battle-tested in real competitions — where it won **first place twice**.
+
+---
+
+## ✨ **Key Features**
+
+### 🧠 AI-Powered Health Assistant
+
+* Suggests the right doctor based on symptoms
+* Understands natural language
+* Fast, accurate, and real-time
+
+### 📞 Calling & Voice Agents
+
+* Auto-calling system (Twilio-like)
+* Reads doctor availability
+* Can connect patients instantly
+
+### 🏥 Emergency Ambulance Locator
+
+* Search nearby hospitals
+* One-click "Call" button
+* Dynamic list powered by backend
+
+### 📅 Smart Appointment Booking
+
+* Find doctors by specialization
+* Real-time schedule & slots
+* Smooth booking workflow
+
+### 🔐 Secure Patient Data
+
+* Encrypted storage
+* Token-based authentication
+* No exposed sensitive info
+
+---
+
+# 📸 **UI Screenshots**
+
+<p align="center"><img src="assets/screenshots/1.png" width="80%"></p>
+<p align="center"><img src="assets/screenshots/2.png" width="80%"></p>
+<p align="center"><img src="assets/screenshots/3.png" width="80%"></p>
+<p align="center"><img src="assets/screenshots/4.png" width="80%"></p>
+<p align="center"><img src="assets/screenshots/5.png" width="80%"></p>
+<p align="center"><img src="assets/screenshots/6.png" width="80%"></p>
+
+---
+
+# 🏗 **System Architecture**
+
+```
+Frontend (React)
+     ↓
+REST API (Python FastAPI / Flask)
+     ↓
+AI Models (Symptom → Doctor mapping)
+     ↓
+SQLite (Local) + PostgreSQL (Cloud)
+     ↓
+Calling Agent (Telephony API)
+```
+
+
+---
+
+# 🗂 **ER Diagram (Database Design)**
+
+```
+USER ───────< APPOINTMENT >────── DOCTOR
+  │                                  │
+  └──────< FEEDBACK >──────┘         │
+                                      └── SPECIALIZATION
+```
 
 <p align="center">
-  <img src="banner.png" width="85%" style="border-radius: 12px;">
+  <img src="screenshots/er.png" width="70%">
 </p>
 
 ---
 
-# 🏅 **Badges & Status**
+# 📡 **API Documentation**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Backend-Python%203.10-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Frontend-ReactJS-61DAFB?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-informational?style=for-the-badge">
-  <img src="https://img.shields.io/badge/AI-Enabled-success?style=for-the-badge">
-  <img src="https://img.shields.io/badge/VoiceBot-Active-brightgreen?style=for-the-badge">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge">
-</p>
+## 🔹 **Auth APIs**
+
+| Method | Endpoint         | Description         |
+| ------ | ---------------- | ------------------- |
+| POST   | `/auth/register` | Create new user     |
+| POST   | `/auth/login`    | Login and get token |
 
 ---
 
-# 🔗 **Live Demo & Media**
+## 🔹 **Doctor APIs**
 
-| Feature                       | Link                                                                                                                                             |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 🌍 **Live Website**           | [https://healthease-632g.onrender.com/](https://healthease-632g.onrender.com/)                                                                   |
-| 🎥 **Project Demo (YouTube)** | [https://www.youtube.com/watch?v=Gttzyv2Nr-A](https://www.youtube.com/watch?v=Gttzyv2Nr-A)                                                       |
-| 🎧 **AI Calling Bot Audio**   | [https://drive.google.com/file/d/1l8-ql_AvB1rkWiFYEXWB1IYXtEByCgOM/view](https://drive.google.com/file/d/1l8-ql_AvB1rkWiFYEXWB1IYXtEByCgOM/view) |
+| Method | Endpoint                        | Description             |
+| ------ | ------------------------------- | ----------------------- |
+| GET    | `/doctors`                      | Get list of all doctors |
+| GET    | `/doctors/{id}`                 | Get doctor details      |
+| GET    | `/doctors/specialization/{key}` | Filter doctors          |
 
 ---
 
-# ⭐ **OpenGraph Preview (GitHub Social Card)**
+## 🔹 **Appointments API**
 
-Add this to your repo root as: **`opengraph.png`**
+| Method | Endpoint                  | Description         |
+| ------ | ------------------------- | ------------------- |
+| POST   | `/appointments/book`      | Book appointment    |
+| GET    | `/appointments/user/{id}` | User's appointments |
+| DELETE | `/appointments/{id}`      | Cancel appointment  |
+
+---
+
+## 🔹 **Ambulance / Emergency**
+
+| Method | Endpoint               | Description            |
+| ------ | ---------------------- | ---------------------- |
+| GET    | `/emergency/hospitals` | Fetch nearby hospitals |
+| GET    | `/emergency/call/{id}` | Trigger call           |
+
+---
+
+# ⚙️ **Tech Stack**
+
+### 🖥 Frontend
+
+* ReactJS
+* Tailwind / CSS
+* Axios
+* Clean surgical UI
+
+### 🧪 Backend
+
+* Python
+* FastAPI / Flask
+* SQLAlchemy
+* JWT authentication
+
+### 🧠 AI / ML
+
+* Custom symptom–doctor model
+* Pre-trained embeddings
+* Vector similarity model
+
+### 🗄 Database
+
+* SQLite (Local Dev)
+* PostgreSQL (Cloud Deploy – Render)
+
+### 📞 Calling
+
+* Twilio-like API integration
+
+---
+
+# 🏆 **What Makes HealthEase Special?**
+
+### ✔ Real AI — Not Hardcoded
+
+### ✔ Real telephony system
+
+### ✔ Real database + cloud deployment
+
+### ✔ Enterprise-grade UI
+
+### ✔ End-to-end working product
+
+### ✔ Award-winning implementation
+
+---
+
+# 🛠 **Installation**
 
 ```
-<!-- GitHub Social Preview -->
-<p align="center">
-  <img src="opengraph.png" width="100%">
-</p>
+git clone https://github.com/YOUR_USERNAME/HealthEase.git
+cd HealthEase
 ```
 
-*(Replace with the beautiful banner I generated earlier.)*
-
----
-
-# 🎞️ **Animated Demo GIF**
-
-Add `demo.gif` to your repo and embed it:
-
-```
-<p align="center">
-  <img src="demo.gif" width="90%" style="border-radius: 8px;">
-</p>
-```
-
----
-
-# 🧠 **What is HealthEase-AI?**
-
-**HealthEase-AI** is a modern, intelligent healthcare platform combining:
-
-✨ AI Symptom Prediction
-📞 AI Voice Bot (IVR + TTS + STT)
-🖥️ Beautiful React Web App
-🐍 Python Backend
-🗂️ SQLite (Local) + PostgreSQL (Cloud)
-🔐 AES-256 Secure Healthcare Data
-
-> **Mission:** Make healthcare accessible to everyone — even without a smartphone.
-
----
-
-# 🏆 **Achievements**
-
-### 🥇 *Winner — SIH Internal Round 2025*
-
-### 🥇 *Winner — Project Expo (Rank 1/60 Teams)*
-
----
-
-# 🚀 **Features at a Glance**
-
-### 🤖 AI Symptom Checker
-
-### 📞 AI Calling Agent
-
-### 🏥 Doctor Discovery
-
-### 🚑 Emergency Ambulance Lookup
-
-### 🕒 Appointment Reminders
-
-### 👤 Patient Portal
-
-### 🔐 Encrypted Health Data
-
----
-
-# 🧩 **System Architecture**
-
-<p align="center">
-  <img src="architecture.png" width="85%">
-</p>
-
----
-
-# 🗄️ **Full ER Diagram**
-
-> Generate & upload `er-diagram.png`, then embed like this:
-
-```
-<p align="center">
-  <img src="er-diagram.png" width="85%">
-</p>
-```
-
-### **Sample ER Entities to Include**
-
-* Users
-* Doctors
-* Appointments
-* Specializations
-* Ambulance_Hospitals
-* AI_Predictions
-* Call_Logs
-* Feedback
-
-I can generate a full ER diagram image if you want — just say:
-👉 **“Generate ER diagram image.”**
-
----
-
-# 📸 **Screenshots**
-
-### 🏠 Home Page
-
-![Home](./screenshots/1.png)
-
-### ⭐ Why Choose Us
-
-![Why Choose](./screenshots/2.png)
-
-### ⚙️ How It Works
-
-![How It Works](./screenshots/3.png)
-
-### 👨‍👩‍👧 User Testimonials
-
-![Testimonials](./screenshots/4.png)
-
-### 🚑 Emergency Ambulance
-
-![Ambulance](./screenshots/5.png)
-
-### 📍 Footer
-
-![Footer](./screenshots/6.png)
-
----
-
-# 🧪 **API Documentation (Python Backend)**
-
-## 🔹 `POST /api/auth/signup`
-
-Registers a new user.
-
-#### **Request**
-
-```json
-{
-  "name": "Karthik",
-  "email": "karthik@mail.com",
-  "password": "123456",
-  "phone": "9876543210"
-}
-```
-
-#### **Response**
-
-```json
-{
-  "message": "Signup successful",
-  "user_id": 12
-}
-```
-
----
-
-## 🔹 `POST /api/auth/login`
-
-Logs in the user.
-
-#### Request
-
-```json
-{
-  "email": "karthik@mail.com",
-  "password": "123456"
-}
-```
-
----
-
-## 🔹 `POST /api/symptoms/predict`
-
-Predicts disease & specialist.
-
-#### Request
-
-```json
-{
-  "symptoms": ["fever", "cough", "fatigue"]
-}
-```
-
-#### Response
-
-```json
-{
-  "prediction": "Viral Infection",
-  "specialist": "General Physician",
-  "confidence": 0.91
-}
-```
-
----
-
-## 🔹 `GET /api/doctors`
-
-Fetch list of doctors.
-
----
-
-## 🔹 `POST /api/appointments/book`
-
-Book an appointment.
-
----
-
-## 🔹 `GET /api/ambulance?location=...`
-
-Returns nearest hospitals + phone numbers.
-
----
-
-# 📦 **Project Structure**
-
-```
-HealthEase-AI/
-│── ai-models/
-│── backend/
-│── calling-agent/
-│── frontend/
-│── database/
-│── screenshots/
-│── docs/
-│── README.md
-```
-
----
-
-# 🔧 **Installation**
-
-### Backend (Python)
+### Backend Setup
 
 ```
 cd backend
 pip install -r requirements.txt
-python main.py
+uvicorn main:app --reload
 ```
 
-### AI Model Server
-
-```
-cd ai-models
-python inference.py
-```
-
-### Frontend (React)
+### Frontend Setup
 
 ```
 cd frontend
@@ -289,29 +222,31 @@ npm start
 
 ---
 
-# 🗄️ **Environment Variables**
+# 🧪 **Run AI Models**
 
 ```
-DATABASE_URL=postgresql://user:pass@host/db
-SECRET_KEY=your-secret
-MODEL_PATH=ai-models/model.pkl
+python ai/predict.py
 ```
+
+---
+
+# 🚀 **Deployment**
+
+### Hosted on Render
+
+Backend + PostgreSQL
+Frontend on Static Hosting
 
 ---
 
 # 🤝 **Contributing**
 
-PRs • Issues • Feature Requests — all are welcome.
+Pull requests are welcome!
+For major changes, open an issue first.
 
 ---
 
-# ⭐ **Support**
+# 📄 **License**
 
-If you found this project useful, please **star the repository ⭐**
-It really motivates the team and boosts reaching recruiters & hackathon judges.
+MIT License © 2025 HealthEase Team
 
----
-
-# 🎉 README UPGRADED SUCCESSFULLY
-
-This is now a **top-tier, investor-grade, hackathon-winning README**.
