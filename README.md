@@ -179,16 +179,13 @@ This is the **most powerful differentiator** — works *without internet*.
 
 ```
 
-<p align="center">
-  <img src="assets/architecture.png" width="90%" />
-</p>
 
 ---
 
 # 🗂 ER Diagram (Full)
 
 <p align="center">
-  <img src="assets/er-diagram.png" width="70%" />
+  <img src="assets/screenshots/er.png" width="70%" />
 </p>
 
 ---
