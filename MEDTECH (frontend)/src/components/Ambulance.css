@@ -1,0 +1,177 @@
+/* 🚑 Floating Ambulance Button (Sticky Circular) */
+.ambulance-fab {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e63946; /* Emergency red */
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.ambulance-fab:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+/* 🟢 Overlay background when popped */
+.ambulance-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65); /* dark semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* 📦 Ambulance widget box */
+.ambulance-widget {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #e63946;
+}
+
+/* Title */
+.ambulance-widget h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d3557;
+  text-align: center;
+}
+
+/* Search bar */
+.search-bar {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 12px;
+  transition: border 0.2s;
+}
+.search-bar:focus {
+  border: 1px solid #457b9d;
+}
+
+/* Suggestions dropdown */
+.dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f8f9fa;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+.dropdown li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1d3557;
+}
+.dropdown li:hover {
+  background: #e9ecef;
+}
+
+/* Hospitals list */
+.hospital-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hospital-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+.hospital-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.hospital-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d3557;
+  margin: 0 0 4px;
+}
+.hospital-phone {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* Call button */
+.call-btn {
+  background: #2a9d8f;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.call-btn:hover {
+  background: #21867a;
+}
+
+/* Loading / empty states */
+.loading {
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,32 @@
+/* Reset body + html */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container full height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport */
+  background-color: #f9f9f9; /* or your dark theme */
+}
+
+/* Main content grows to fill screen */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Footer sticks to bottom */
+.footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 14px;
+  color: #555;
+}

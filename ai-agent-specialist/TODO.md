@@ -1,0 +1,4 @@
+- [x] Install express
+- [x] Create server.js with POST /analyze-symptoms endpoint
+- [x] Update package.json to add start script
+- [x] Modify testGoogleApi.js to call local API

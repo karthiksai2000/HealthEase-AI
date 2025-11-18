@@ -1,0 +1,204 @@
+/* Doctor Hospital Info Styles */
+.hospital-info-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.info-header {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ecf0f1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-header::before {
+  content: "•";
+  color: #3498db;
+  font-size: 2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-label::before {
+  content: "↳";
+  color: #3498db;
+  font-weight: bold;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #3498db;
+}
+
+.fee-value {
+  color: #27ae60;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+  border-left: 3px solid #27ae60;
+}
+
+.experience-value {
+  color: #e67e22;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fef9f3 100%);
+  border-left: 3px solid #e67e22;
+}
+
+.hospital-not-available {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #856404;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.hospital-not-available::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 2px dashed #bdc3c7;
+}
+
+.error-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #e74c3c;
+  padding: 2rem;
+  background: #fdedec;
+  border-radius: 15px;
+  border: 1px solid #f5b7b1;
+  margin: 2rem 0;
+}
+
+.error-text::before {
+  content: "❌";
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hospital-info-container {
+    padding: 1rem;
+  }
+  
+  .info-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .info-value {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-section {
+    padding: 1rem;
+    border-left: 3px solid #3498db;
+  }
+  
+  .info-header {
+    font-size: 1.3rem;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+  }
+  
+  .info-value {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation for loading state */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.loading-text {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Icon styles using pseudo-elements */
+.info-item:nth-child(1) .info-label::before { content: "👤"; }
+.info-item:nth-child(2) .info-label::before { content: "📧"; }
+.info-item:nth-child(3) .info-label::before { content: "🏠"; }
+.info-item:nth-child(4) .info-label::before { content: "🎯"; }
+.info-item:nth-child(5) .info-label::before { content: "📅"; }
+.info-item:nth-child(6) .info-label::before { content: "💰"; }
+
+.hospital-info .info-item:nth-child(1) .info-label::before { content: "🏥"; }
+.hospital-info .info-item:nth-child(2) .info-label::before { content: "📍"; }
+.hospital-info .info-item:nth-child(3) .info-label::before { content: "📞"; }
